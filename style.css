@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+body {
+    background: linear-gradient(90deg, #FFCCCC, #CCFFFF);
+    text-align: center;
+}
+
+header span {
+    font-size: 50px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.elementBtn:hover {
+    background: #E6DFDF;
+    transform: scale(1.05);
+}
+.elementBtn span {
+    font-size: 150px;
+}
+.fire {
+    color: #d94e4e;
+}
+.water {
+    color: #09d6d6;
+}
+.wood {
+    color: #453232;
+}
+#scene {
+    display: flex;
+    justify-content: center;
+}
+#scene span {
+    font-size: 100px;
+}

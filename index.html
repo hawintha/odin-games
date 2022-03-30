@@ -7,23 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Fire Water Wood</h1>
+    <header>
+        <span class="fire">FIRE</span>
+        <span class="water">WATER</span>
+        <span class="wood">WOOD</span>
+    </header>
     <h4>Fire beats Wood | Wood beats Water | Water beats Fire</h4>
     <h2>Choose an Element</h2>
-    <button class="elementBtn" id="fire">Fire</button>
-    <button class="elementBtn" id="water">Water</button>
-    <button class="elementBtn" id="wood">Wood</button>
+    <button id="fire" class="elementBtn"><span class="fire material-icons-outlined">local_fire_department</span></button>
+    <button id="water" class="elementBtn"><span class="water material-icons-outlined">water_drop</span></button>
+    <button id="wood" class="elementBtn"><span class="wood material-icons-outlined">forest</span></button>
 
     <h2 id="scoreBoard"> ◈◆◈ You: 0 ◈◆◈ Mother Nature: 0 ◈◆◈ </h2>
     <h3 id="finalOutcome"></h3>
 
     <div id="gameLog"></div>
-
-
-
+    <div id="scene">
+        <span id="playerIcon" class="material-icons-outlined"></span>
+        <p>VS</p>
+        <span id="computerIcon" class="material-icons-outlined"></span>
+    </div>
 
     <script src="script.js"></script>
 </body>
