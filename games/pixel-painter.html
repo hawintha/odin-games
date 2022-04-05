@@ -11,13 +11,18 @@
 
 <body>
     <h1>Pixel Painter</h1>
-    <p id="gridSizeDisplay">16 x 16</p>
-    <label for="gridSizeInput">Grid Size:</label>
-    <input type="range" name="gridSize" id="gridSizeInput" min="1" max="100" value="16">
-    <button id="newGridBtn">New Grid</button>
-    <br>
-    <label for="colorInput">Color:</label>
-    <input type="color" name="color" id="colorInput">
+    <div id="settings">
+        <div>
+            <p id="gridSizeDisplay">16 x 16</p>
+            <label for="gridSizeInput">Grid Size:</label>
+            <input type="range" name="gridSize" id="gridSizeInput" min="1" max="100" value="16">
+            <button id="newGridBtn">New Grid</button>
+        </div>
+        <div>
+            <label for="colorInput">Color:</label>
+            <input type="color" name="color" id="colorInput">
+        </div>
+    </div>
     <div id="grid"></div>
 
     <script src="pixel-painter.js"></script>
