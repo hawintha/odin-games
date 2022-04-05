@@ -1,4 +1,4 @@
-.container {
+#grid {
     display: grid;
     height: 500px;
     width: 500px;
@@ -10,5 +10,5 @@
     width: 100%;
 }
 .square:hover {
-    background-color: grey;
+    background-color: lightsteelblue;
 }

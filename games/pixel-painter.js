@@ -1,30 +1,40 @@
-const container = document.querySelector(".container");
-const newGrid = (gridLength) => {
+const grid = document.querySelector('#grid');
+let color = "#000000"
+let isMouseDown = false;
+grid.onmousedown = () => (isMouseDown = true);
+grid.onmouseup = () => (isMouseDown = false);
+function paint(e) {
+    if (e.type === 'mouseover' && !isMouseDown) {
+        return;
+    } else {
+        e.target.style.backgroundColor = color;
+    };
+};
+function createGrid(gridLength) {
     for (let i = 1; i <= gridLength * gridLength; i++) {
         const newSquare = document.createElement('div');
-        container.style.cssText = `grid-template-columns: repeat(${gridLength}, 1fr); grid-template-rows: repeat(${gridLength}, 1fr);`;
+        grid.style.cssText = `grid-template-columns: repeat(${gridLength}, 1fr); grid-template-rows: repeat(${gridLength}, 1fr);`;
         newSquare.classList.add("square");
-        container.appendChild(newSquare);
-    }
-}
-newGrid(16);
+        grid.appendChild(newSquare);
+        newSquare.addEventListener('mouseover', paint);
+        newSquare.addEventListener('mousedown', paint);
+    };
+};
+createGrid(16); //default grid on load
 
 const gridSizeDisplay = document.querySelector('#gridSizeDisplay');
 const gridSizeInput = document.querySelector('#gridSizeInput');
-gridSizeInput.addEventListener('change', () => {
+gridSizeInput.addEventListener('mousemove', () => {
     gridSizeDisplay.textContent = `${gridSizeInput.value} x ${gridSizeInput.value}`;
 });
-const newGridBtn = document.querySelector("#newGridBtn");
+const newGridBtn = document.querySelector('#newGridBtn');
 newGridBtn.addEventListener('click', () => {
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
+    while (grid.firstChild) {
+        grid.removeChild(grid.firstChild);
     };
-    newGrid(gridSizeInput.value);
-})
-
-const squares = document.querySelectorAll('.square');
-squares.forEach((square) => {
-    square.addEventListener('click', () => {
-        square.style.backgroundColor = 'blue';
-    })
-})
+    createGrid(gridSizeInput.value);
+});
+const colorInput = document.querySelector('#colorInput');
+colorInput.addEventListener('change', () => {
+    color = colorInput.value;
+});
