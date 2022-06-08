@@ -15,7 +15,8 @@ h1 {
     margin: 20px;
 }
 
-#gridSizeDisplay {
+#gridSizeOutput {
+    display: block;
     margin: 0px 110px;
 }
 

@@ -1,13 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
-    <a href="games/fire-water-wood.html">Fire Water Wood</a>
-    <a href="games/pixel-painter.html">Pixel Painter</a>
+    <div class="grid">
+        <nav class="grid">
+            <a class="grid logo" href="index.html"><span
+                    class="material-symbols-outlined">sports_esports</span>Dashboard</a>
+            <div class="grid navLinks actions">
+                <a class="grid" href="index.html"><span class="material-symbols-outlined">house</span>Home</a>
+                <a class="grid" href="#"><span class="material-symbols-outlined">account_circle</span>Profile</a>
+                <a class="grid" href="#"><span class="material-symbols-outlined">chat_bubble</span>Messages</a>
+                <a class="grid" href="#"><span class="material-symbols-outlined">history</span>History</a>
+                <a class="grid" href="#"><span class="material-symbols-outlined">assignment</span>Tasks</a>
+                <a class="grid" href="#"><span class="material-symbols-outlined">groups</span>Communities</a>
+            </div>
+            <div class="grid navLinks logistics">
+                <a class="grid" href="#"><span class="material-symbols-outlined">settings</span>Settings</a>
+                <a class="grid" href="#"><span class="material-symbols-outlined">help</span>Support</a>
+                <a class="grid" href="#"><span class="material-symbols-outlined">security</span>Privacy</a>
+            </div>
+        </nav>
+        <header class="grid">
+            <div class="grid searchField">
+                <input type="text" name="search" id="search" placeholder="Search...">
+                <span class="search material-symbols-outlined">search</span>
+            </div>
+            <div class="quickSettings">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="material-symbols-outlined">sentiment_very_satisfied</span>
+            </div>
+            <div class="grid greet">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo">
+                <p>Hi there,</p>
+                <h2>Ha <a href="https://github.com/hawintha" target="_blank">(@hawintha)</a></h2>
+            </div>
+            <div class="grid quickBtns">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+        </header>
+        <main class="grid">
+            <h2>My Games</h2>
+            <h2>Announcements</h2>
+            <section class="grid games">
+                <div class="grid card">
+                    <a class="game" href="games/fire-water-wood.html">Fire Water Wood</a>
+                    <p>An elemental twist to the classic game of Rock Paper Scissors</p>
+                    <div class="gameCardBtns">
+                        <a href="games/fire-water-wood.html" class="material-symbols-outlined">visibility</a>
+                        <a href="https://github.com/hawintha/odin-games/tree/main/games"
+                            class="material-symbols-outlined">code</a>
+                    </div>
+                </div>
+                <div class="grid card">
+                    <a class="game" href="games/pixel-painter.html">Pixel Painter</a>
+                    <p>A simple online drawing editor for creating pixel art</p>
+                    <div class="gameCardBtns">
+                        <a href="games/pixel-painter.html" class="material-symbols-outlined">visibility</a>
+                        <a href="https://github.com/hawintha/odin-games/tree/main/games"
+                            class="material-symbols-outlined">code</a>
+                    </div>
+                </div>
+                <div class="grid card">
+                    <a class="game" href="games/pixel-painter.html">Pixel Painter</a>
+                    <p>A simple online drawing editor for creating pixel art</p>
+                    <div class="gameCardBtns">
+                        <a href="games/pixel-painter.html" class="material-symbols-outlined">visibility</a>
+                        <a href="https://github.com/hawintha/odin-games/tree/main/games"
+                            class="material-symbols-outlined">code</a>
+                    </div>
+                </div>
+                <div class="grid card">
+                    <a class="game" href="games/fire-water-wood.html">Fire Water Wood</a>
+                    <p>An elemental twist to the classic game of Rock Paper Scissors</p>
+                    <div class="gameCardBtns">
+                        <a href="games/fire-water-wood.html" class="material-symbols-outlined">visibility</a>
+                        <a href="https://github.com/hawintha/odin-games/tree/main/games"
+                            class="material-symbols-outlined">code</a>
+                    </div>
+                </div>
+                <div class="grid card">
+                    <a class="game" href="games/fire-water-wood.html">Fire Water Wood</a>
+                    <p>An elemental twist to the classic game of Rock Paper Scissors</p>
+                    <div class="gameCardBtns">
+                        <a href="games/fire-water-wood.html" class="material-symbols-outlined">visibility</a>
+                        <a href="https://github.com/hawintha/odin-games/tree/main/games"
+                            class="material-symbols-outlined">code</a>
+                    </div>
+                </div>
+                <div class="grid card">
+                    <a class="game" href="games/pixel-painter.html">Pixel Painter</a>
+                    <p>A simple online drawing editor for creating pixel art</p>
+                    <div class="gameCardBtns">
+                        <a href="games/pixel-painter.html" class="material-symbols-outlined">visibility</a>
+                        <a href="https://github.com/hawintha/odin-games/tree/main/games"
+                            class="material-symbols-outlined">code</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="card announcements">
+                    <div class="announcement">
+                        <h3>Coming Soon!</h3>
+                        <p>More games like Tic-Tac-Toe, Battleship, and Memory Card are expected to be completed soon.
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="announcement">
+                        <h3>Calculator Project</h3>
+                        <p>Newly completed: A basic calculator for simple calculations with keyboard support.
+                            <a href="../odin-tools/tools/calculator.html" target="_blank"
+                                class="material-symbols-outlined">open_in_new</a>
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="announcement">
+                        <h3>Soba Project</h3>
+                        <p>Newly completed: A fan site for soba enthusiasts to find some delicious soba recipes.
+                            <a href="../odin-recipes/index.html" target="_blank"
+                                class="material-symbols-outlined">open_in_new</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <h2>Friends</h2>
+            <section class="grid card friends">
+                <div class="grid friend">
+                    <img src="https://static.wikia.nocookie.net/sixflags/images/2/21/Tuzki.png/revision/latest?cb=20180829080737"
+                        alt="Tuzki, the bunny, holding two peace hand signs up." class="friendIcon">
+                    <h3>Tuzki</h3>
+                    <a href="https://www.facebook.com/clubtuzki/" target="_blank">@clubtuzki</a>
+                </div>
+                <div class="grid friend">
+                    <img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T1302A1PA2669PT24X0Y0D1029186559FS2610/views/1,width=650,height=650,appearanceId=1/peach-goma-mochi-cat-kitty-cute-romantic-kawaii-gift-boyfriend-girlfriend.jpg"
+                        alt="Peach, the cat, eating a cookie shaped like Goma Cat." class="friendIcon">
+                    <h3>Peach & Goma</h3>
+                    <a href="https://www.facebook.com/peachandgoma/" target="_blank">@peachandgoma </a>
+                </div>
+                <div class="grid friend">
+                    <img src="https://b.thumbs.redditmedia.com/zcUWhHpLjaAKxnuGREtIBz76S2pdJRkBmCbkuifzxpg.png"
+                        alt="Molang, the rabbit, and Piu Piu, the baby chick smiling and waving." class="friendIcon">
+                    <h3>Molang</h3>
+                    <a href="https://www.facebook.com/Molang/" target="_blank">@Molang</a>
+                </div>
+                <div class="grid friend">
+                    <img src="https://static.wikia.nocookie.net/miraluminex-gaming/images/e/e6/Site-logo.png/revision/latest?cb=20211210203405"
+                        alt="Milk bear eating Mocha bear." class="friendIcon">
+                    <h3>Milk & Mocha</h3>
+                    <a href="https://www.facebook.com/milkmochabear/" target="_blank">@milkmochabear</a>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
+
 </html>

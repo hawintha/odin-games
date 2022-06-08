@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.grid {
+    display: grid;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: rgb(0 0 0 / 25%) 0px 5px 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gold;
+}
+
+body>.grid {
+    grid-template: auto 1fr / 1fr 4fr;
+    height: 100vh;
+}
+
+nav {
+    grid-area: 1/1/-1/2;
+    grid-template-rows: 4rem 1fr 1fr;
+    align-items: start;
+    background-color: #20AAD0;
+    color: white;
+    padding: 1rem;
+}
+
+.logo {
+    column-gap: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.logo span {
+    font-size: 2rem;
+}
+
+.navLinks {
+    gap: 2rem;
+}
+
+.logistics {
+    align-self: end;
+}
+
+nav a {
+    grid-template-columns: 2rem 1fr;
+    align-items: center;
+    color: white;
+}
+
+header {
+    grid-template: 2rem 1fr / 1fr max-content;
+    padding: 1rem;
+    align-items: center;
+}
+
+.searchField {
+    grid-template-columns: 1fr 2rem;
+}
+
+.searchField input {
+    grid-area: 1/1/-1/-1;
+    outline: none;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 1rem;
+    padding: 0 1rem;
+}
+
+.search {
+    grid-area: 1/2/-1/-1;
+}
+
+.search:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+.greet {
+    grid-template: 2rem 1fr / 4rem 1fr;
+}
+
+.greet img {
+    grid-area: 1/1/3/2;
+    align-self: center;
+    width: 100%;
+}
+
+.greet p {
+    align-self: end;
+}
+
+.greet a {
+    font-size: 1rem;
+}
+
+.quickSettings,
+.quickBtns {
+    justify-self: right;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.quickBtns button {
+    background-color: #20AAD0;
+    border-radius: 15px;
+    border-width: 0 0 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 25px;
+    width: 5rem;
+}
+
+.quickBtns button:hover {
+    border: #FFFFFF;
+}
+
+main {
+    grid-template: 2rem 1fr 4rem 1fr / 3fr 1fr;
+    padding: 3%;
+    background-color: aliceblue;
+    box-shadow: rgb(0 0 0 / 25%) 0px 5px 5px;
+}
+
+.games {
+    grid-area: 2/1/-1/2;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    padding-right: 5%;
+}
+
+.games .card {
+    grid-template-rows: 2rem 1fr 2rem;
+    align-content: space-between;
+    background-color: white;
+    border-left: 5px solid gold;
+    padding: 1rem;
+}
+
+.game {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.gameCard a {
+    font-weight: 600;
+}
+
+.gameCardBtns {
+    justify-self: end;
+}
+
+.announcements {
+    background-color: white;
+    padding: 5% 10%;
+}
+
+h3 {
+    font-size: 16px;
+    align-self: end;
+}
+
+hr {
+    margin: 5% 0;
+}
+
+.announcement p {
+    font-size: 14px;
+}
+
+.announcement a {
+    font-size: 13px;
+}
+
+.friends {
+    background-color: white;
+    padding: 5%;
+    align-content: space-around;
+}
+
+h2 {
+    align-self: end;
+    padding-bottom: 10px;
+}
+
+.friend {
+    grid-template: 1fr 1fr / 25% 75%;
+    gap: 0 10px;
+    margin-right: 10%;
+}
+
+.friendIcon {
+    grid-area: 1/1/-1/2;
+    border: 2px dashed gold;
+    border-radius: 50%;
+    width: 100%;
+}
+
+.friend a {
+    font-size: 14px;
+}

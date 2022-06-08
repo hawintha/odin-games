@@ -22,10 +22,10 @@ function createGrid(gridLength) {
 };
 createGrid(16); //default grid on load
 
-const gridSizeDisplay = document.querySelector('#gridSizeDisplay');
+const gridSizeOutput = document.querySelector('#gridSizeOutput');
 const gridSizeInput = document.querySelector('#gridSizeInput');
-gridSizeInput.addEventListener('mousemove', () => {
-    gridSizeDisplay.textContent = `${gridSizeInput.value} x ${gridSizeInput.value}`;
+gridSizeInput.addEventListener('input', () => {
+    gridSizeOutput.textContent = `${gridSizeInput.value} x ${gridSizeInput.value}`;
 });
 const newGridBtn = document.querySelector('#newGridBtn');
 newGridBtn.addEventListener('click', () => {
@@ -35,6 +35,6 @@ newGridBtn.addEventListener('click', () => {
     createGrid(gridSizeInput.value);
 });
 const colorInput = document.querySelector('#colorInput');
-colorInput.addEventListener('change', () => {
+colorInput.addEventListener('input', () => {
     color = colorInput.value;
 });
