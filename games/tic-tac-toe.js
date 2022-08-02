@@ -1,8 +1,8 @@
 const gameBoard = (function () {
-    let marks = ["", "", "", "", "", "", "", "", ""];
-
+    let marks = [];
     const tilesGrid = document.querySelector('#tilesGrid');
-    for (let i = 1; i < 10; i++) {
+    for (let i = 0; i < 9; i++) {
+        marks.push("");
         const tile = document.createElement('div');
         tile.classList.add("tile");
         tile.setAttribute('data-index', i);
@@ -12,7 +12,9 @@ const gameBoard = (function () {
     const tiles = document.querySelectorAll('.tile');
     tiles.forEach((tile) => {
         tile.addEventListener('click', (e) => {
-            game.play(e.target, e.target.dataset.index, game.currentPlayer);
+            if (!e.target.innerText) {
+                game.play(e.target, e.target.dataset.index, game.currentPlayer, game.currentPlayer.marker);
+            }
         });
     });
 
@@ -21,7 +23,20 @@ const gameBoard = (function () {
         tile.innerText = marker;
     }
 
-    return { markTile };
+    function checkWin(marker) {
+        if (
+            (marks[0] === marker && marks[1] === marker && marks[2] == marker) ||
+            (marks[3] === marker && marks[4] === marker && marks[5] == marker) ||
+            (marks[6] === marker && marks[7] === marker && marks[8] == marker) ||
+            (marks[0] === marker && marks[3] === marker && marks[6] == marker) ||
+            (marks[1] === marker && marks[4] === marker && marks[7] == marker) ||
+            (marks[2] === marker && marks[5] === marker && marks[8] == marker) ||
+            (marks[0] === marker && marks[4] === marker && marks[8] == marker) ||
+            (marks[2] === marker && marks[4] === marker && marks[6] == marker)
+        ) { alert(`${marker} has won!`) }
+    }
+    
+    return { markTile, checkWin };
 })();
 
 const createPlayer = (marker) => {
@@ -33,12 +48,14 @@ const game = (function () {
     const p1 = createPlayer("X");
     const p2 = createPlayer("O");
     let currentPlayer = p1;
-
     const alertedPlayer = document.querySelector('#alertedPlayer');
-    function play(tile, index, player) {
-        gameBoard.markTile(tile, index, player.marker);
+
+    function play(tile, index, player, marker) {
+        gameBoard.markTile(tile, index, marker);
+        gameBoard.checkWin(marker);
         player === p1 ? this.currentPlayer = p2 : this.currentPlayer = p1;
         alertedPlayer.innerText = this.currentPlayer.marker;
     }
+
     return { currentPlayer, play };
 })();
