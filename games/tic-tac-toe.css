@@ -1,21 +1,65 @@
+* {
+    margin: 0;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    text-shadow: 2px 2px goldenrod;
+    padding: 20px;
+}
+
+.scoreBoard {
+    border: 4px dashed skyblue;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    align-items: center;
+}
+
+.scoreBoard .playerIcon {
+    font-size: 40px;
+    color: goldenrod;
+}
+
+.scoreBoard p span {
+    color: royalblue;
+}
+
+h2 {
+    color: goldenrod;
+    padding: 5% 5% 0 5%;
+    ;
+}
+
 #alertedPlayer {
-    color: green;
+    color: royalblue;
 }
 
 #tilesGrid {
+    width: 400px;
+    height: 400px;
+    margin: 5% auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    background-color: lightcoral;
-    width: 300px;
-    height: 300px;
     gap: 3px;
+    background-color: skyblue;
 }
 
 .tile {
-    background-color: lightgreen;
+    font-size: 100px;
+    background-color: white;
+    color: goldenrod;
 }
 
 .tile:hover {
-    background-color: green;
+    background-color: lightcyan;
 }

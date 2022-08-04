@@ -7,7 +7,7 @@ const gameBoard = (function () {
         tilesGrid.replaceChildren();
         for (let i = 0; i < 9; i++) {
             marks.push("");
-            const tile = document.createElement('div');
+            const tile = document.createElement('p');
             tile.classList.add("tile");
             tile.setAttribute('data-index', i);
             tilesGrid.appendChild(tile);
@@ -28,6 +28,10 @@ const gameBoard = (function () {
         tile.innerText = marker;
     }
 
+    const p1Score = document.querySelector('#p1Score');
+    const p2Score = document.querySelector('#p2Score');
+    const ties = document.querySelector('#ties');
+
     function checkWin(marker) {
         if (
             (marks[0] === marker && marks[1] === marker && marks[2] == marker) ||
@@ -40,6 +44,11 @@ const gameBoard = (function () {
             (marks[2] === marker && marks[4] === marker && marks[6] == marker)
         ) {
             alert(`${marker} has won!`);
+            if (marker === "X") {
+                p1Score.innerText++;
+            } else if (marker === "O") {
+                p2Score.innerText++;
+            }
             newBoard();
         }
     }
@@ -47,6 +56,7 @@ const gameBoard = (function () {
     function checkTie() {
         if (!marks.includes("", 0)) {
             alert("It's a tie!");
+            ties.innerText++;
             newBoard();
         }
     }
