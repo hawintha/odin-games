@@ -1,65 +1,165 @@
 * {
     margin: 0;
+    --color-dark-blue: #203060;
+    --color-purple: #A070F0;
+    --color-light-purple: #C5AAFF;
+    --color-dark-purple: #7A50C0;
+    --color-pink: #FACAD0;
 }
 
 body {
     text-align: center;
+    background: linear-gradient(90deg, var(--color-light-purple), var(--color-pink));
+}
+
+body .playerIcon {
+    font-size: 40px;
+    color: goldenrod;
 }
 
 h1 {
-    font-size: 70px;
-    text-shadow: 2px 2px goldenrod;
-    padding: 20px;
+    font-size: 5rem;
+    padding: 1rem;
+    color: var(--color-dark-blue);
+}
+
+.card {
+    background-color: white;
+    border: 5px solid var(--color-dark-blue);
+    border-radius: 2rem;
+    display: grid;
+}
+
+#settings {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    width: 25rem;
+    height: 20rem;
+    grid-template-columns: 1fr 2rem 1fr;
+    justify-items: center;
+    align-content: space-around;
+}
+
+h2 {
+    grid-column: 1 / -1;
+    font-size: 3rem;
+    color: var(--color-dark-blue);
+}
+
+.nameInput {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 70%;
+    outline: none;
+    border: none;
+}
+
+.nameInput:focus {
+    color: var(--color-purple);
+}
+
+.vs {
+    align-self: center;
+    color: var(--color-dark-purple);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#playBtn {
+    grid-column: 2;
+    margin: 10px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: var(--color-purple);
+    color: white;
+    font-family: inherit;
+    padding: 0 3rem 0 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    box-shadow: inset 0 0 2rem -0.5rem var(--color-dark-purple);
+    overflow: hidden;
+    border-radius: 0.8rem;
+    border: none;
+    height: 2.5rem;
+}
+
+button .icon {
+    color: var(--color-dark-purple);
+    background: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.6rem;
+    box-shadow: 2px 2px 8px 4px var(--color-dark-purple);
+    right: 5px;
+    transition: all 0.3s;
+    font-size: 25px;
+}
+
+button:hover .icon {
+    width: calc(100% - 11px);
+}
+
+button:active .icon {
+    transform: scale(0.95);
+}
+
+main {
+    display: none;
 }
 
 .scoreBoard {
-    border: 4px dashed skyblue;
-    border-radius: 10px;
-    width: 400px;
+    width: 25rem;
     margin: auto;
-    padding: 10px;
-    display: grid;
+    padding: 1rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 3px;
     align-items: center;
 }
 
-.scoreBoard .playerIcon {
-    font-size: 40px;
-    color: goldenrod;
+.points span {
+    color: var(--color-purple);
 }
 
-.scoreBoard p span {
-    color: royalblue;
-}
-
-h2 {
-    color: goldenrod;
+h3 {
+    color: var(--color-dark-blue);
     padding: 5% 5% 0 5%;
-    ;
+    font-size: 2rem;
 }
 
-#alertedPlayer {
-    color: royalblue;
+#playerNotified {
+    text-shadow: 2px 2px goldenrod;
 }
 
 #tilesGrid {
-    width: 400px;
-    height: 400px;
-    margin: 5% auto;
-    display: grid;
+    background-color: var(--color-dark-blue);
+    overflow: hidden;
+    width: 25rem;
+    height: 25rem;
+    margin: 1rem auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 3px;
-    background-color: skyblue;
+    gap: 4px;
 }
 
 .tile {
-    font-size: 100px;
+    font-size: 7rem;
     background-color: white;
     color: goldenrod;
 }
 
 .tile:hover {
-    background-color: lightcyan;
+    background-color: var(--color-purple);
+}
+
+#resetBtn {
+    margin: 3rem auto;
 }

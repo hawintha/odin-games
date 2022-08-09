@@ -13,17 +13,36 @@
 
 <body>
     <h1>Tic-Tac-Toe</h1>
-    <div class="scoreBoard">
-        <p class="playerIcon">X</p>
-        <p class="playerIcon">O</p>
-        <span class="material-symbols-outlined playerIcon">balance</span>
-        <p class="points">Wins: <span id="p1Score">0</span></p>
-        <p class="points">Wins: <span id="p2Score">0</span></p>
-        <p class="points">Ties: <span id="ties">0</span></p>
+    <div class="card" id="settings">
+        <h2>Settings</h2>
+        <div>
+            <p class="playerIcon">X</p>
+            <input class="nameInput" type="text" name="p1Name" id="p1Name" placeholder="Player X">
+        </div>
+        <p class="vs">VS</p>
+        <div>
+            <p class="playerIcon">O</p>
+            <input class="nameInput" type="text" name="p2Name" id="p2Name" placeholder="Player O">
+        </div>
+        <button id="playBtn">Play
+            <span class="icon material-symbols-outlined">arrow_right_alt</span>
+        </button>
     </div>
-    <h2>Player <span id="alertedPlayer">X</span>'s Turn</h2>
-    <div id="tilesGrid"> </div>
-
+    <main>
+        <div class="card scoreBoard">
+            <p class="playerIcon">X</p>
+            <span class="material-symbols-outlined playerIcon">balance</span>
+            <p class="playerIcon">O</p>
+            <p class="points">Wins: <span id="p1Score">0</span></p>
+            <p class="points">Ties: <span id="ties">0</span></p>
+            <p class="points">Wins: <span id="p2Score">0</span></p>
+        </div>
+        <h3><span id="playerNotified"></span>'s Turn</h3>
+        <div class="card" id="tilesGrid"> </div>
+        <button id="resetBtn">Reset Scores
+            <span class="icon material-symbols-outlined">replay</span>
+        </button>
+    </main>
 
     <script src="tic-tac-toe.js"></script>
 </body>
