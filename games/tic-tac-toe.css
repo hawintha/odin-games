@@ -37,6 +37,7 @@ h1 {
     width: 25rem;
     height: 20rem;
     grid-template-columns: 1fr 2rem 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-items: center;
     align-content: space-around;
 }
@@ -67,8 +68,15 @@ h2 {
 }
 
 #playBtn {
-    grid-column: 2;
-    margin: 10px;
+    grid-area: 3 / 2;
+    width: 200px;
+    justify-self: center;
+    margin-top: 20px;
+}
+
+#vsAIBtn {
+    grid-area: 4 / 2;
+    width: 200px;
 }
 
 button {
