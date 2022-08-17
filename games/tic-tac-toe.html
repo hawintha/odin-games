@@ -14,20 +14,24 @@
 <body>
     <h1>Tic-Tac-Toe</h1>
     <div class="card" id="settings">
-        <h2>Settings</h2>
+        <h2>Player vs Player</h2>
         <div>
             <p class="playerIcon">X</p>
             <input class="nameInput" type="text" name="p1Name" id="p1Name" placeholder="Player X">
         </div>
-        <p class="vs">VS</p>
+        <p class="vs"> </p>
         <div>
             <p class="playerIcon">O</p>
             <input class="nameInput" type="text" name="p2Name" id="p2Name" placeholder="Player O">
         </div>
-        <button id="playBtn">2 Player Mode
+        <button class="startBtn" id="playBtn">2 Player Mode
             <span class="icon material-symbols-outlined">arrow_right_alt</span>
         </button>
-        <button id="vsAIBtn">AI Mode
+        <h3 id="headingAI">Player vs AI</h3>
+        <button class="startBtn vsAI" id="normal">Normal
+            <span class="icon material-symbols-outlined">arrow_right_alt</span>
+        </button>
+        <button class="startBtn vsAI" id="imp">Impossible
             <span class="icon material-symbols-outlined">arrow_right_alt</span>
         </button>
     </div>
@@ -40,11 +44,17 @@
             <p class="points">Ties: <span id="ties">0</span></p>
             <p class="points">Wins: <span id="p2Score">0</span></p>
         </div>
-        <h3><span id="playerNotified"></span>'s Turn</h3>
+        <h4><span id="playerNotified"></span>'s Turn</h4>
         <div class="card" id="tilesGrid"> </div>
-        <button id="resetBtn">Reset Scores
-            <span class="icon material-symbols-outlined">replay</span>
-        </button>
+        <div class="optionBtns">
+            <button id="resetBtn">Reset Scores
+                <span class="icon material-symbols-outlined">replay</span>
+            </button>
+            <button id="returnBtn">Back to Menu
+                <span class="icon material-symbols-outlined">keyboard_return</span>
+            </button>
+        </div>
+
     </main>
 
     <script src="tic-tac-toe.js"></script>
