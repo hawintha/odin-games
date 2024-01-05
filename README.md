@@ -7,3 +7,4 @@ View my live demo here: https://hawintha.github.io/odin-games/
 - [Fire Water Wood](https://hawintha.github.io/odin-games/games/fire-water-wood.html): An elemental twist to the classic game of Rock Paper Scissors
 - [Pixel Painter](https://hawintha.github.io/odin-games/games/pixel-painter.html): A simple online drawing editor for creating pixel art
 - [Tic-Tac-Toe](https://hawintha.github.io/odin-games/games/tic-tac-toe.html): A classic turn-based game that can can be played against a friend or AI
+- [Battleship](https://hawintha.github.io/battleship/): An interactive browser-based game based on the classic Battleship board game

@@ -190,3 +190,4 @@ const settings = (function () { //SETTINGS MODULE
     });
     return { p1, p2, currentPlayer, isEnd, switchPlayers };
 })();
+
